@@ -1,0 +1,52 @@
+.header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px 40px;
+
+    .wrapper {
+        display: flex;
+        align-items: center;
+
+    }
+
+    .menu {
+        list-style-type: none;
+        padding-right: 20px;
+        border-right: 1px solid #EDEDED;
+
+        > li {
+            display: inline-block;
+            > a {
+                display: block;
+                font-size: 16px;
+                color: #222;
+                padding: 0 12px;
+                text-decoration: none;
+            }
+        }
+
+    }
+    .buttons {
+        display: flex;
+        align-items: center;
+        cursor: pointer;
+        border: none;
+        outline: none;
+        padding-left: 20px;
+        gap: 20px;
+    
+        .login-button {
+            font-size: 16px;
+                color: #222;
+                padding: 0 12px;
+        }
+    
+        .sign-up-button {
+            margin-left: 15px;
+            padding: 10px 8px;
+            border: 1px solid #E1E1E1;
+        }
+}
+
+}
