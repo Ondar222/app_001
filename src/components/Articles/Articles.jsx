@@ -7,20 +7,20 @@ import styles from './Articles.module.scss'
 //это относится к Поисковику
 const Articles = () => {
 
-        const [City, setCity] = React.useState('Найти')
+    const [City, setCity] = React.useState('Найти')
 
     React.useEffect(() => {
-        if(City === 'Novosibirsk') console.log(City)
+        if (City === 'Novosibirsk') console.log(City)
     }, [City])
 
 
-//а это относится к второму диву после Поисковика
+    //а это относится к второму диву после Поисковика
 
     const [comments, setComments] = React.useState([])
     const [loading, setLoading] = React.useState([true])
 
 
-    
+
 
     React.useEffect(() => {
 
@@ -42,21 +42,7 @@ const Articles = () => {
     }, [])
 
     return (
-        
         <div>
-              <div>
-                 <h1>Интересное</h1>
-                 <input type="text" value={City} onChange={(e) => setCity(e.target.value)} placeholder='Enter city' />
-                 <div className={styles.card}>
-                     <img src="" alt="" />
-                     <h4>
-                         <a href="/">Read Now</a>
-                     </h4>
-                 </div>
-             </div>
-
-
-
             <h1>Articles</h1>
             {loading && 'Загрузка...'}
             <div className={styles.wrapper}>
@@ -71,9 +57,7 @@ const Articles = () => {
 
                 ))}
             </div>
-          
         </div>
-        
     );
 
 
