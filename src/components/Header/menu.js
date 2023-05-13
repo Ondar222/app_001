@@ -1,15 +1,17 @@
+
+
 const menu = [
     {
-        title: 'Products',
-        link: '/',
+        title: 'About',
+        link: '/about',
     },
     {
         title: 'Prising',
-        link: '/',
+        link: '/prising',
     },
     {
         title: 'Dashboard',
-        link: '/',
+        link: '/dashboard',
     }
 ]
 

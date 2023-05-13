@@ -2,11 +2,14 @@ import React from 'react';
 // import logoImage from ".../assets/edgio.svg"
 import menu from './menu';
 import styles from './Header.module.scss'
+import Modal from '../Modal/Login';
+import Help from '../Modal/Help'
 
 const Header = () => {
+   
     return <div className={styles.header}>
         <div className={styles.logo}>
-            <img style={{height: "50px"}} src="https://cdn.svgporn.com/logos/edgio.svg" alt="" />
+            <img style={{ height: "50px" }} src="https://cdn.svgporn.com/logos/edgio.svg" alt="" />
         </div>
         <div className={styles.wrapper}>
             <ul className={styles.menu}>
@@ -18,8 +21,12 @@ const Header = () => {
                 ))}
             </ul>
             <div className={styles.buttons}>
-                <button className={styles['login-button']}>Login</button>
-                <button className={styles['sign-up-button']}>Sign Up</button>
+                <button className={styles['login-button']}>
+                    <Modal />
+                </button>
+                <button className={styles['sign-up-button']}>
+                    <Help />
+                </button>
             </div>
         </div>
     </div>

@@ -1,6 +1,6 @@
 import React from 'react';
 import styles from './Articles.module.scss'
-
+// import axios from 'axios';
 
 
 
@@ -16,7 +16,7 @@ const Articles = () => {
 
 //а это относится к второму диву после Поисковика
 
-    const [post, setPost] = React.useState([])
+    const [comments, setComments] = React.useState([])
     const [loading, setLoading] = React.useState([true])
 
 
@@ -26,11 +26,11 @@ const Articles = () => {
 
         const fetchData = async () => {
             try {
-                const response = await fetch('https://jsonplaceholder.typicode.com/posts')
+                const response = await fetch('https://jsonplaceholder.typicode.com/comments?postId=1')
 
                 const data = await response.json()
 
-                setPost(data)
+                setComments(data)
 
             } catch (error) {
 
@@ -61,10 +61,11 @@ const Articles = () => {
             {loading && 'Загрузка...'}
             <div className={styles.wrapper}>
 
-                {post.map(post => (
-                    <div key={post.id} className={styles.card}>
-                        <h4> {post.title}  </h4>
-                        <p>{post.body}</p>
+                {comments.map(comments => (
+                    <div key={comments.id} className={styles.card}>
+                        <h4> {comments.name}  </h4>
+                        <p>{comments.email}</p>
+                        <p>{comments.body}</p>
                         <a href="/">Read Now</a>
                     </div>
 
