@@ -1,14 +1,16 @@
 import Header from "./components/Header/Header";
 import Articles from "./components/Articles/Articles";
 import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom";
-import About from "./About";
-import Prising from "./Prising";
-import Dashboard from "./Dashboard";
+import About from "./pages/About/About";
+import Prising from "./pages/Prising/Prising";
+import Dashboard from "./pages/Dashboard/Dashboard";
+import Main from "./components/Main/Main";
 
 const App = () => {
   return (
    <div>
     <Header />
+   <Main />
     <Router>
       
       <Routes>

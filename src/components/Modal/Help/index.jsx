@@ -4,7 +4,7 @@ import styles from './Help.module.scss'
 const Help = () => {
     const[open, setOpen] = React.useState(false)
     return (
-        <div className={styles.App}>
+        <div className={styles.Help}>
         <button onClick={() => setOpen(true)} className={styles['open-modal-btn']}>Help</button>
         {
             open && (
